@@ -1,0 +1,114 @@
+@charset "utf-8";
+@font-face {
+    font-family: fight;
+    src: url(/fonts/fatal_fighter/Fatal\ Fighter.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #9c4242;
+}
+
+header{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1{
+    font-family: fight;
+    font-size: 360%;
+    text-shadow: 10px 10px 90px white;
+}
+.container{
+    height: 350px;
+    width: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 100px;
+    
+}
+
+
+/*formataçaõ da barra de navegação(location)*/
+.navegation{
+    position: absolute;/*Posição em relação ao container*/
+    bottom: 20px; /*Distância a partir da esquerda*/
+    left: 50%;/*Alterar o eixo principal*/
+    transform: translate(-50%);
+    display: flex;/*colocar o conteudo lado a lado*/
+}
+
+.bar{
+    background-color: rgb(255, 230, 0);
+    width: 15px;
+    height: 15px;
+    margin: 6px;/*space between indicators*/
+    transition: .3s; /*transition in the hover*/
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.bar:hover{
+    background: red;
+}
+
+input{
+    display: none; 
+}
+
+.images{
+    display: flex;
+    width: 600%;
+    height: 100%;
+}
+
+.image{
+    width: 16.6666666667%;
+
+    transition: 0.5s;
+}
+
+
+.image img{
+
+    height: 100%;
+    width: 100%;
+}
+
+#image1:checked ~ .img1{
+    margin-left: 0;
+}
+
+#image2:checked ~ .img1{
+    margin-left: -16.6666666667%;
+}
+
+#image3:checked ~ .img1{
+    margin-left: -33.3333333333%;
+}
+
+#image4:checked ~ .img1{
+    margin-left: -50%;
+}
+
+#image5:checked ~ .img1{
+    margin-left: -66.6666666667%;
+}
+
+#image6:checked ~ .img1{
+    margin-left: -83.3333333333%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
